@@ -1,0 +1,62 @@
+# >>> VSCode venv deactivate hook >>> ~ = /c/Users/e12345/
+source /c/Users/e12345/.vscode/deactivate
+# <<< VSCode venv deactivate hook <<<
+
+# fixes \ at the prompt start of zsh in vscode terminal
+export TERM=cygwin
+
+
+
+
+# forward search history
+stty -ixon
+
+
+
+# If there are multiple matches for completion, Tab should cycle through them
+bind 'TAB:menu-complete'
+
+# And Shift-Tab should cycle backwards
+bind '"\e[Z": menu-complete-backward'
+
+# Display a list of the matching files
+bind "set show-all-if-ambiguous on"
+
+# Perform partial (common) completion on the first Tab press, only start
+# cycling full results on the second Tab press (from bash version 5)
+bind "set menu-complete-display-prefix on"
+
+
+# Cycle through history based on characters already typed on the line
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+# Keep Ctrl-Left and Ctrl-Right working when the above are used
+bind '"\e[1;5C":forward-word'
+bind '"\e[1;5D":backward-word'
+
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+export FZF_DEFAULT_OPTS='--height 40%  --layout reverse --border top'
+
+
+eval "$(zoxide init --cmd cd bash)"
+
+
+
+export STARSHIP_CONFIG="C:\Users\e12345\starship.toml"
+
+eval "$(starship init bash)"
+
+
+
+
+alias ls='eza -a --icons=always'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ocd='explorer.exe .'
+
+ 
