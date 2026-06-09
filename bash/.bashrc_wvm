@@ -26,6 +26,8 @@ bind "set show-all-if-ambiguous on"
 # cycling full results on the second Tab press (from bash version 5)
 bind "set menu-complete-display-prefix on"
 
+# Use case insensitive autocompletion
+bind 'set completion-ignore-case on'
 
 # Cycle through history based on characters already typed on the line
 bind '"\e[A":history-search-backward'
