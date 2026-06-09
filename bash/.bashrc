@@ -168,6 +168,8 @@ bind '"\e[B":history-search-forward'
 bind '"\e[1;5C":forward-word'
 bind '"\e[1;5D":backward-word'
 
+# Use case insensitive autocompletion
+bind 'set completion-ignore-case on'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/pristakos/google-cloud-sdk/path.bash.inc' ]; then . '/home/pristakos/google-cloud-sdk/path.bash.inc'; fi
