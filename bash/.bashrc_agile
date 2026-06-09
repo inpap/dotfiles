@@ -157,6 +157,8 @@ bind '"\e[B":history-search-forward'
 bind '"\e[1;5C":forward-word'
 bind '"\e[1;5D":backward-word'
 
+# Use case insensitive autocompletion
+bind 'set completion-ignore-case on'
 
 eval "$(zoxide init --cmd cd bash)"
 
